@@ -1,0 +1,19 @@
+1. Install the following software
+
+     GLPK library   
+          http://www.gnu.org/software/glpk/
+
+     ocaml-glpk
+          http://ocaml-glpk.sourceforge.net/
+
+2. Run "make spica" in the source directory.
+   
+   If the make is successful, 
+   spica.exe (or spica in Linux) will be created.
+
+  
+     
+
+
+
+

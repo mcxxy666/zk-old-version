@@ -1,0 +1,60 @@
+SpiCA: type-based protocol verifier for SPI-calculus with Correspondence Assertions
+
+Copyright 2008 by Naoki Kobayashi and Daisuke Kikuchi
+
+This is a type based protocol verifier for checking authenticity in security protocols,
+based on:
+
+   Daisuke Kikuchi and Naoki Kobayashi, 
+   Type-Based Automated Verification of Authenticity in Cryptographic Protocols
+   ESOP 2009.
+
+
+1. Licensing
+
+ SpiCA is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+
+ SpiCA is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+2. How to install
+
+    see INSTALL
+
+3. How to use
+
+  The following is a sample usage ("%" is a Unix prompt) in cygwin.
+
+    % spica (filename)
+
+   Here, (filename) stands for the location of sources written in the syntax of SPICA.
+
+   If the verification succeeds, a type-annotated version of the process is output.
+   Otherwise, it just reports a failure ("The process is ill-typed.").
+
+
+4. Syntax of SPICA
+
+  (Variables)
+    x, y, z, ...
+
+  (messages)
+    M ::= x | () | (M1,M2) | inl(M) | inr(M) | {M}K | (M)
+
+  (processes)
+    P ::= O | M!N | M?y.P | P1|P2 | *P | (new x)P | check x is N.P 
+        | decrypt M is {x}K.P | case M is inl(x).P is inr(y).Q  
+        | split M is (x,y).P | begin M.P | end M.P | (P)
+        | match M is (x,y).P
+        | M!!N | M??x.P | (news x)P  /** primitives for communication on private channels **/
+         
+ 

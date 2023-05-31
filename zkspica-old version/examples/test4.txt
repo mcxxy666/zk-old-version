@@ -1,0 +1,8 @@
+/*** ill-typed process ***/
+
+(new x)
+(new k)
+  (begin x.x!{x}k
+   |
+   x?y.decrypt y is {z}k.check x is z.end z.O)
+

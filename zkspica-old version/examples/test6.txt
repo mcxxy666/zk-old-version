@@ -1,9 +1,0 @@
-(new x)
-(new k)
-(news c)
-  (c!!k
-   |
-    c??u.begin x.x!{x}u
-   |
-   x?y.decrypt y is {z}k.check x is z.end x.O)
-

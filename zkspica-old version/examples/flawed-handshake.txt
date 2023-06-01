@@ -1,8 +1,0 @@
-/* A flawed version of the simple nonce handshake protocol */
-/* The nonce check is removed from the correct version */
-
-(new key)
-(*(ch?n.(new msg)begin msg.ch!{(msg,n)}key)
-|*((new non)(ch!non
-  |ch?ctext.decrypt ctext is {x}key.
-   split x is (m,non2).end m.O)))
